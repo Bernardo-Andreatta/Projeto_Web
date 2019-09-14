@@ -3,10 +3,15 @@ body{
     background-color: #f0f0f0;
 }
 h1{
-    font-size:  24px; 
-    font-weight:  600; 
-    color:  grey; 
+    font-size:  30px; 
+    font-weight:  600;  
     opacity:  .85; 
+    color: black;
+    font-weight:  700;
+}
+.cyan{
+    color: #8bc9c6;
+    font-weight:  700;
 }
 h2{
     line-height:  155%; 
@@ -18,13 +23,9 @@ h2{
     max-width:  200px; 
     margin-bottom:  40px; 
 }
-span{
-    color: black;
-    font-weight:  700;
-}
 .caixa{
     height: 60%;
-    width: 35%;
+    width: 40%;
     display: table;
     margin-right: auto;
     margin-left: auto;
@@ -51,11 +52,11 @@ span{
     position: relative;
     z-index: 2;
   }
-  .logo{
+.logo{
     position: relative;
     z-index: 3;
     margin-left: 5%;
-    margin-top: -90%;
+    margin-top: -74%;
 }
 input {
     font-size:  16px; 
@@ -101,9 +102,16 @@ button:active{
 button:focus {
     outline:0;
 }
+input:focus::placeholder{
+    color:black;
+}
 
 .erro{
     border-bottom:  solid 1px red;
     outline: 0; 
     box-shadow:  0 2px 6px -8px;
+}
+
+.vazio::-webkit-input-placeholder{
+    color: red;
 }

@@ -6,25 +6,6 @@ $(document).ready(function(){
     });
 });
 
-function fLocalValidaCampos(){
-    var email = $("#tEmail").val();
-    var senha = $("#tSenha").val();
-
-    if (email == ""){
-        $("#tEmail").addClass("erro");
-    }
-    else{
-        $("#tEmail").removeClass("erro");
-    }
-
-    if (senha == ""){
-        $("#tSenha").addClass("erro");
-    }
-    else{
-        $("#tSenha").removeClass("erro");
-    }
-}
-
 function fLocalValidaEmail(){
     var email = $("#tEmail").val();
 
@@ -35,4 +16,23 @@ function fLocalValidaEmail(){
         $("#tEmail").removeClass("erro");
     }
 
+}
+
+function fLocalValidaCampos(){
+    var email = $("#tEmail").val();
+    var senha = $("#tSenha").val();
+
+    if (email == ""){
+        $("#tEmail").addClass("erro vazio");
+    }
+    else{
+        $("#tEmail").removeClass("erro");
+    }
+
+    if (senha == ""){
+        $("#tSenha").addClass("erro vazio");
+    }
+    else{
+        $("#tSenha").removeClass("erro");
+    }
 }
