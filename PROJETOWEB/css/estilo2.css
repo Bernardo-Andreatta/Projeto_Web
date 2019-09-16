@@ -1,0 +1,16 @@
+body{
+    background-color: #f0f0f0;
+}
+
+.cadastro{
+    margin:auto;
+    text-align: center;
+    height: 60%;
+    width: 40%;
+    background:white;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 10%;
+    margin-bottom: 10%;
+    z-index: 0;
+}
