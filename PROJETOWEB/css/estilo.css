@@ -140,3 +140,21 @@ button:focus {
 .vazio::-webkit-input-placeholder{
     color: red;
 }
+
+.divBotao2{
+    position: absolute;
+    width:  20%;
+    min-width:  100px;
+    border-radius:  24px; 
+    text-align:  center; 
+    margin-top:  5%; 
+    background-color: #8bc9c6; 
+    color:  #fff; 
+    font-size:  14px;
+    margin-left:  5%; 
+    margin-top: 16.1%;
+    font-weight:  500; 
+    box-shadow:  0px 2px 6px -1px rgba(0,0,0,.13); 
+    border:  none;
+    outline: 0; 
+}
