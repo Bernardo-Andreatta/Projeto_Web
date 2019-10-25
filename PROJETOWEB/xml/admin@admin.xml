@@ -1,4 +1,5 @@
-<user>
-    <senha>Admin</senha>
+<?xml version="1.0"?>
+<user titulo="">
+    <senha>123</senha>
     <usuario>Admin</usuario>
 </user>

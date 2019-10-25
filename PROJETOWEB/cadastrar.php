@@ -53,7 +53,7 @@ if(isset($_POST['submit'])){
                     echo '</ul>';
                 }
             ?>
-            <p>Usuario <input type="text" name="usuario" value="<?php if(isset($_POST['usuario'])){echo $_POST['usuario']; } ?>"></p>
+            <p>Usuario <input type="text" name="usuario" value="<?php if(isset($_POST['usuario'])){echo $_POST['usuario']; }?>"></p>
             <p>Email <input type="text" name="email" value="<?php if(isset($_POST['email'])){echo $_POST['email']; } ?>"></p>
             <p>Senha <input type="text" name="senha" value="<?php if(isset($_POST['senha'])){echo $_POST['senha']; } ?>"></p>
             <p>Confirmar Senha <input type="text" name="c_senha" value="<?php if(isset($_POST['c_senha'])){echo $_POST['c_senha']; } ?>"></p>
