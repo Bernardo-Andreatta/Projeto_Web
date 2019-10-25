@@ -4,12 +4,36 @@
         <script src="js/funcoes.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="css/estilo.css" type="text/css">
-
+        <title>Login</title>
     </head>
 
     <body>
+            <?php
+                $error = false;
+                if(isset($_POST['login'])){
+                   $email = $_POST['email'];
+                   $senha = $_POST['senha'];
+                   if(file_exists('xml/'.$email.'.xml')){
+                        $xml = new SimpleXMLElement ('xml/'.$email.'.xml', 0 , true );
+                        if($senha == $xml->senha){
+                            session_start();
+                            $_SESSION['email'] = $email;
+                            header('Location: principal.php');
+                            die;
+                        }
+                   }
+                $error = true;
+               }
+            ?>
+
+            <?php
+                if(isset($_POST['cadastrar'])){
+                    header('Location: cadastrar.php');
+                }
+            ?>
 
         <div class="divBox">
+           
 
                 <div class="divBackground"></div>
 
@@ -21,17 +45,16 @@
                 </div>
 
                 <div>
-                    <input type="text" placeholder="E-mail" id="tEmail" class="divInput1"><br>
-                    <input type="password" placeholder="Senha" id="tSenha" class="divInput2">
-                </div>
+                    <form action="" method="post">
+                        <input id="tEmail" type="text" placeholder="E-mail" name="email" class="divInput1"><br>
+                    
+                        <input id="tSenha" type="password" placeholder="Senha" name="senha" class="divInput2">
 
-                <div>
-                    <button id="bLog" class="Botao">Log in</button>
-                </div>
+                        <input type="submit" class="Botao" name='login' value = "Login">
 
-                <div class="divBotao2">
-                    <button id="bSign" onclick="location.href='paginas/cadastro.html' "class="Botao2">Sign up</button>
-                </div>
+                        <input type="submit" class="Botao2" name='cadastrar' value = " Cadastrar">
+
+                    </form>
         </div>
 
     </body>

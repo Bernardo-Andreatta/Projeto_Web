@@ -1,3 +1,4 @@
+/*
 $(document).ready(function(){
 
     $("#bLog").click(function(){
@@ -35,4 +36,6 @@ function fLocalValidaCampos(){
     else{
         $("#tSenha").removeClass("erro");
     }
+    
 }
+*/
