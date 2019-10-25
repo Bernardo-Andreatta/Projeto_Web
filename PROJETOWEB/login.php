@@ -37,7 +37,7 @@
 
                 <div class="divBackground"></div>
 
-                <div class="divLogo"><img src="img/logo.png" alt="Logo" width="10%" height="8%"></div>
+                <div ><img class="divLogo" src="img/logo.png" alt="Logo"></div>
 
                 <div>
                         <h1><text class="cyan">Cyan</text>Mail</h1><br>
@@ -52,7 +52,7 @@
 
                         <input type="submit" class="Botao" name='login' value = "Login">
 
-                        <input type="submit" class="Botao2" name='cadastrar' value = " Cadastrar">
+                        <input type="submit" class="Botao2" name='cadastrar' value = " Logon">
 
                     </form>
         </div>

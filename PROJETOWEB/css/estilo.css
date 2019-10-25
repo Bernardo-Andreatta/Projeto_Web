@@ -25,10 +25,10 @@ body{
     float: left;
 }
 .divLogo{
-    width: 35%;
-    height: 50%;
+    width: 3%;
+    height: 4%;
     position: absolute;
-    margin-left:-14%;
+    margin-left:-25%;
     margin-top: 2%;
     z-index: 1;
 }

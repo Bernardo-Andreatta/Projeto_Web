@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
     if(count($errors) == 0){
         $xml = new SimpleXMLElement ('<user></user>');
         $xml->addChild('senha',$senha);
-        $xml->addChild('usuario',$senha);
+        $xml->addChild('usuario',$usuario);
         $xml->asXML('xml/'.$email.'.xml');
         header('Location: login.php');
         die;
