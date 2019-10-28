@@ -51,9 +51,9 @@
                     
                         <input id="tSenha" type="password" placeholder="Senha" name="senha" class="divInput2">
 
-                        <input type="submit" class="Botao" name='login' value = "Login">
+                        <input type="submit" class="botao" name='login' value = "Login">
 
-                        <input type="submit" class="Botao2" name='cadastrar' value = " Logon">
+                        <input type="submit" class="botao2" name='cadastrar' value = " Logon">
 
                     </form>
         </div>

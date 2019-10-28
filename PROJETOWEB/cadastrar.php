@@ -44,7 +44,9 @@ if(isset($_POST['submit'])){
     </head>
 
     <body>
+        
         <form method="post" action="">
+            <div class="aviso">
             <?php
                 if(count($errors) > 0){
                     echo '<ul>';
@@ -54,12 +56,18 @@ if(isset($_POST['submit'])){
                     echo '</ul>';
                 }
             ?>
+            </div>
             <div class="box">
-            <p>Usuario <input type="text" name="usuario" value="<?php if(isset($_POST['usuario'])){echo $_POST['usuario']; }?>"></p>
-            <p>Email <input type="text" name="email" value="<?php if(isset($_POST['email'])){echo $_POST['email']; } ?>"></p>
-            <p>Senha <input type="text" name="senha" value="<?php if(isset($_POST['senha'])){echo $_POST['senha']; } ?>"></p>
-            <p>Confirmar Senha <input type="text" name="c_senha" value="<?php if(isset($_POST['c_senha'])){echo $_POST['c_senha']; } ?>"></p>
-            <p><input type="submit" name="submit" value="Cadastrar"></p>
+            <div class="divBackground"></div>
+            <div ><img class="divLogo" src="img/logo.png" alt="Logo"></div>
+            <h1><text class="cyan">Cadas</text>trar</h1><br>
+            <div class="loc">
+            <p><input class="divInput" type="text" name="usuario" placeholder="Usuario" value="<?php if(isset($_POST['usuario'])){echo $_POST['usuario']; }?>"></p>
+            <p><input class="divInput" type="text" name="email" placeholder="Email" value="<?php if(isset($_POST['email'])){echo $_POST['email']; } ?>"></p>
+            <p><input class="divInput" type="text" name="senha"placeholder="Senha" value="<?php if(isset($_POST['senha'])){echo $_POST['senha']; } ?>"></p>
+            <p><input class="divInput" type="text" placeholder="Confirmar senha" name="c_senha" value="<?php if(isset($_POST['c_senha'])){echo $_POST['c_senha']; } ?>"></p>
+            </div>
+            <p><input type="submit" name="submit" value="Cadastrar" class="botao"=></p>
             </div>
         </form>
 
