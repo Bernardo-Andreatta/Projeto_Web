@@ -40,7 +40,7 @@ if(isset($_POST['submit'])){
 <html>
     <head>
     <link rel="stylesheet" href="css/estilo2.css" type="text/css">
-    <title>Cadastrar</title>
+    <title>Logon</title>
     </head>
 
     <body>
@@ -60,14 +60,14 @@ if(isset($_POST['submit'])){
             <div class="box">
             <div class="divBackground"></div>
             <div ><img class="divLogo" src="img/logo.png" alt="Logo"></div>
-            <h1><text class="cyan">Cadas</text>trar</h1><br>
+            <h1><text class="cyan">Log</text>On</h1><br>
             <div class="loc">
             <p><input class="divInput" type="text" name="usuario" placeholder="Usuario" value="<?php if(isset($_POST['usuario'])){echo $_POST['usuario']; }?>"></p>
             <p><input class="divInput" type="text" name="email" placeholder="Email" value="<?php if(isset($_POST['email'])){echo $_POST['email']; } ?>"></p>
             <p><input class="divInput" type="text" name="senha"placeholder="Senha" value="<?php if(isset($_POST['senha'])){echo $_POST['senha']; } ?>"></p>
             <p><input class="divInput" type="text" placeholder="Confirmar senha" name="c_senha" value="<?php if(isset($_POST['c_senha'])){echo $_POST['c_senha']; } ?>"></p>
             </div>
-            <p><input type="submit" name="submit" value="Cadastrar" class="botao"=></p>
+            <p><input type="submit" name="submit" value="Logon" class="botao"=></p>
             </div>
         </form>
 
