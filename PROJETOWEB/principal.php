@@ -14,7 +14,7 @@ if(!file_exists('xml/'. $_SESSION['email'].'.xml')){
 <html>
 
     <head>
-
+        <title>Pagina do Usuario</title>
     </head>
     
     <body>
@@ -37,10 +37,10 @@ if(!file_exists('xml/'. $_SESSION['email'].'.xml')){
             if($xml->Destinatario == $_SESSION['email']){
                 echo '<tr>
                     <table>
+                    <tr><td>_________________________________________</td></tr>
                     <tr><td>'.'Remetente: '.$xml->Destinatario->Remetente .'</td></tr>
                     <tr><td>'.'Titulo: '.$xml->Destinatario->Remetente->Titulo .'</td></tr>
-                    <tr><td>'.$xml->Destinatario->Remetente->Titulo->Texto .'</td></tr>
-                    <tr><td>_________________________________________</td></tr>
+                    <tr><td>'.'Texto: '.$xml->Destinatario->Remetente->Titulo->Texto .'</td></tr>
                     </table>
                 </tr>';
                 

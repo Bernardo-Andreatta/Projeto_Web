@@ -21,7 +21,7 @@ body{
     border-top-left-radius:  25px; 
     border-bottom-left-radius:  25px; 
     position: relative;
-    z-index: 0;
+    z-index: 1;
     float: left;
 }
 .divLogo{

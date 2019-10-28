@@ -39,6 +39,7 @@ if(isset($_POST['submit'])){
 
 <html>
     <head>
+    <link rel="stylesheet" href="css/estilo2.css" type="text/css">
     <title>Cadastrar</title>
     </head>
 
@@ -53,11 +54,13 @@ if(isset($_POST['submit'])){
                     echo '</ul>';
                 }
             ?>
+            <div class="box">
             <p>Usuario <input type="text" name="usuario" value="<?php if(isset($_POST['usuario'])){echo $_POST['usuario']; }?>"></p>
             <p>Email <input type="text" name="email" value="<?php if(isset($_POST['email'])){echo $_POST['email']; } ?>"></p>
             <p>Senha <input type="text" name="senha" value="<?php if(isset($_POST['senha'])){echo $_POST['senha']; } ?>"></p>
             <p>Confirmar Senha <input type="text" name="c_senha" value="<?php if(isset($_POST['c_senha'])){echo $_POST['c_senha']; } ?>"></p>
             <p><input type="submit" name="submit" value="Cadastrar"></p>
+            </div>
         </form>
 
     </body>
