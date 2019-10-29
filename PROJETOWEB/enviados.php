@@ -45,12 +45,14 @@ if(!file_exists('xml/'. $_SESSION['email'].'.xml')){
         <form action="" method="get">
             <p><input type="submit" name="enviar" value="Enviar Email" class="botao2"></p>
             <p><input type="submit" name="caixa" value="Caixa de entrada" class="botao3"></p>
+            <p><input type="submit" name="enviados" value="Emails enviados" class="botao4"></p>
         </form>
         </div>
         <div class="logout"><a href="logout.php"><img border="0"src="img/logout.png" width="100" height="100"></a></div>
         
         </div>
 
+        
         <table class="emails" id="emails">
         <?php
         $files = glob('xml/mail/*.xml');
@@ -111,6 +113,8 @@ if(!file_exists('xml/'. $_SESSION['email'].'.xml')){
         }
         }
         ?>
+        </table>
+        
     </body>
 
 </html>

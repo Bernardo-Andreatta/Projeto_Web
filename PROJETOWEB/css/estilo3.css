@@ -113,6 +113,21 @@ a:-webkit-any-link {
     outline:0;
     cursor: pointer;
 }
+.botao4{
+    width:  auto;
+    min-width:  200px;
+    border-radius:  24px; 
+    text-align:  center; 
+    padding:  15px 40px;
+    background-color: #4b8380; 
+    color:  #fff; 
+    font-size:  14px;
+    font-weight:  500; 
+    box-shadow:  0px 2px 6px -1px rgba(0,0,0,.13); 
+    border:  none;
+    outline: 0; 
+}
+
 .td1{
     width: 100%;
     text-align: left;
