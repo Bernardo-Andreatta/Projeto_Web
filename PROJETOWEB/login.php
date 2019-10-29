@@ -1,9 +1,7 @@
 <html>
     <head>
-        <script src="js/jquery-3.4.1.js"></script>
-        <script src="js/funcoes.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/estilo.css" type="text/css">
+        <link rel="stylesheet" href="css/estilo.css?v=<?php echo time(); ?>">
         <title>Login</title>
     </head>
 

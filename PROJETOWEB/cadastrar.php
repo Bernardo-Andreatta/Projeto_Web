@@ -39,7 +39,7 @@ if(isset($_POST['submit'])){
 
 <html>
     <head>
-    <link rel="stylesheet" href="css/estilo2.css" type="text/css">
+    <link rel="stylesheet" href="css/estilo2.css?v=<?php echo time(); ?>">
     <title>Logon</title>
     </head>
 
