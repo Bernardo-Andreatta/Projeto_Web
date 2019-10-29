@@ -173,12 +173,9 @@ h2{
     outline:0;
     cursor: pointer;
 }
-.erro{
-    border-bottom:  solid 1px red;
-    outline: 0; 
-    box-shadow:  0 2px 6px -8px;
-    color:red;
-}
-.erro::-webkit-input-placeholder{
-    color: red;
+.error{
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 30%;
+    color:#A52A2A;
 }

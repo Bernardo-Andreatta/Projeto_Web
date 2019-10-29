@@ -12,16 +12,24 @@
                 if(isset($_POST['login'])){
                    $email = $_POST['email'];
                    $senha = $_POST['senha'];
-                   if(file_exists('xml/'.$email.'.xml')){
+                   if(file_exists('xml/'.$email.'.xml') and $error==false){
                         $xml = new SimpleXMLElement ('xml/'.$email.'.xml', 0 , true );
-                        if($senha == $xml->senha){
+                        if($senha == $xml->senha and $error==false){
                             session_start();
                             $_SESSION['email'] = $email;
                             header('Location: principal.php');
                             die;
                         }
+                        else{
+                            $error = true;
+                        }
                    }
-                $error = true;
+                   else{
+                    $error = true;
+                   }
+                   if ($error == true){
+                       echo '<div class=error>Dados incorretos</div>';
+                   }
                }
             ?>
 
@@ -45,7 +53,7 @@
 
                 <div>
                     <form action="" method="post">
-                        <input id="tEmail" type="text" placeholder="E-mail" name="email" class="divInput1"><br>
+                        <input id="tEmail" type="text" placeholder="E-mail" name="email" class="divInput1" value="<?php if(isset($_POST['email'])){echo $_POST['email']; }?>"><br>
                     
                         <input id="tSenha" type="password" placeholder="Senha" name="senha" class="divInput2">
 

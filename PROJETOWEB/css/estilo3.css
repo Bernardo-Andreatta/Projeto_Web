@@ -2,7 +2,7 @@
 .bem{
     position: absolute;
     margin-top: 0%;
-    margin-left: 5%;
+    margin-left: 2%;
     font-size:  30px;  
     opacity:  .85; 
     color: black;
@@ -137,7 +137,7 @@ a:-webkit-any-link {
 }
 .logout{
     position:absolute;
-    margin-left: 0%;
+    margin-left: 93%;
     margin-top: -1%;
     z-index: 2;
 }
@@ -146,8 +146,13 @@ a:-webkit-any-link {
     margin-left: -2%;
     margin-top: 10%;
 }
-.emails {
-    border-collapse: collapse;   
+.emails td:nth-child(2){
+    min-width: 250px;
+    max-width: 250px;
+}
+.emails td:first-child{
+    min-width: 60px;
+    max-width: 60px;
 }
 .emails tr {
     background-color: #eee;
@@ -163,14 +168,15 @@ a:-webkit-any-link {
     padding: 3px 5px;
 }
 .emails td:hover {
-    cursor: default;
+    cursor: pointer;
 }
 .emails{
     font-size:  26px;
-    position:absolute;
+    position: absolute;;
     margin-left: 25%;
-    margin-top: 5%;
+    margin-top: 6%;
     z-index: 1;
+    border-collapse: collapse;  
 }
 .menor{
     margin-bottom:  5px; 

@@ -7,10 +7,10 @@ if(!file_exists('xml/'. $_SESSION['email'].'.xml')){
 ?>
 
 <?php
-    if(isset($_POST['enviar'])){
+    if(isset($_GET['enviar'])){
         header('Location: enviar.php');
     }
-    if(isset($_POST['enviados'])){
+    if(isset($_GET['enviados'])){
         header('Location: enviados.php');
     }
 ?>
@@ -20,8 +20,8 @@ if(!file_exists('xml/'. $_SESSION['email'].'.xml')){
     <head>
         <title>Caixa de entrada</title>
         <link rel="stylesheet" href="css/estilo3.css?v=<?php echo time(); ?>">
-        <script src="js/funcoes.js"></script>
         <script src="js/jquery-3.4.1.js"></script>
+        <script src="js/funcoes.js"></script>
     </head>
     
     <body>
@@ -30,7 +30,7 @@ if(!file_exists('xml/'. $_SESSION['email'].'.xml')){
             <?php
                 $xml = new SimpleXMLElement ('xml/'.$_SESSION['email'].'.xml', 0 , true );
                 $usuario = $xml->usuario;
-                echo 'Bem<text class="vindo">Vindo </text>'.$usuario;
+                echo 'Bem<text class="vindo"> Vindo </text><br>'.$usuario;
 
             ?>
         
@@ -42,7 +42,7 @@ if(!file_exists('xml/'. $_SESSION['email'].'.xml')){
             <p><input type="submit" name="pesq" value="Pesquisar"class="botao1"></p>
         </form>
         <div class="env">
-        <form action="" method="post">
+        <form action="" method="get">
             <p><input type="submit" name="enviar" value="Enviar Email" class="botao2"></p>
             <p><input type="submit" name="enviados" value="Enviados" class="botao3"></p>
         </form>
@@ -69,14 +69,9 @@ if(!file_exists('xml/'. $_SESSION['email'].'.xml')){
                     echo ' <td> Assunto: </td>';
                     echo ' <td>'.$xml->Titulo.'</td>';
                     echo ' <td class="menor">-</td>';
-                    echo ' <td class="menor">'.$xml->Texto.' </td>';
-                    echo ' <td><form action="" method="post">
-                            <p><input type="submit" name="delete" value=""></p>
-                            </form></td></tr>';
-                    echo '<br>'; 
-                    if(isset($_POST['delete'])){
-                       
-                    }
+                    echo ' <td class="menor">'.$xml->Texto.' </td></tr>';
+                        
+    
             }
             }
             else{
@@ -88,7 +83,7 @@ if(!file_exists('xml/'. $_SESSION['email'].'.xml')){
                     echo ' <td>'.$xml->Titulo.'</td>';
                     echo ' <td class="menor">-</td>';
                     echo ' <td class="menor">'.$xml->Texto.' </td></tr>';
-                    echo '<br>'; 
+                    
                 
             }
             if($xml->Titulo == $busca and $xml->Destinatario == $_SESSION['email']){
@@ -99,7 +94,7 @@ if(!file_exists('xml/'. $_SESSION['email'].'.xml')){
                     echo ' <td>'.$xml->Titulo.'</td>';
                     echo ' <td class="menor">-</td>';
                     echo ' <td class="menor">'.$xml->Texto.' </td></tr>';
-                    echo '<br>'; 
+                    
                 
             }
             if($xml->Destinatario == $_SESSION['email'] and $busca == ''){
@@ -110,7 +105,7 @@ if(!file_exists('xml/'. $_SESSION['email'].'.xml')){
                     echo ' <td>'.$xml->Titulo.'</td>';
                     echo ' <td class="menor">-</td>';
                     echo ' <td class="menor">'.$xml->Texto.' </td></tr>';
-                    echo '<br>'; 
+                    
             }
             
         }
