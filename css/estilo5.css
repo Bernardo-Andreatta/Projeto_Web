@@ -1,0 +1,90 @@
+.divBox{
+    margin:auto;
+    text-align: center;
+    height: 80%;
+    width: 40%;
+    background:white;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 10%;
+    margin-bottom: 10%;
+    z-index: 0;
+}
+
+.destinario{
+    margin-right: 3%;
+}
+.destinario2{
+    margin-top: 3%;
+    margin-right: 7%;
+}
+
+.assunto{
+    margin-right: 3%;
+}
+.assunto2{
+    margin-right: 4%;
+}
+
+.textarea{
+    position: absolute;
+    top: 37%;
+    left: 36%;
+    right: 0;
+    bottom: 30%;
+}
+
+.enviar{
+    position: absolute;
+    top: 74%;
+    left: 46%;
+    right: 0;
+    bottom: 20%;
+    width:  auto;
+    min-width:  100px;
+    border-radius:  24px; 
+    text-align:  center; 
+    padding:  15px 40px;
+    background-color: #91c5c3; 
+    color:  #fff; 
+    font-size:  14px;
+    font-weight:  500; 
+    box-shadow:  0px 2px 6px -1px rgba(0,0,0,.13); 
+    border:  none;
+    outline: 0; 
+    text-align: center;
+}
+
+.enviar:hover{
+    transform:  translateY(-3px);
+    box-shadow:  0 2px 6px -1px rgba(0,0,0, .65);
+    cursor: pointer;
+}
+
+.enviar:active{
+    transform:  scale(.99);
+    cursor: pointer;
+}
+.enviar:focus {
+    outline:0;
+    cursor: pointer;
+}
+
+.back{
+    margin-top: 1%;
+    position: absolute;
+    top: 80.5%;
+    left: 48.5%;
+    right: 0;
+    bottom: 0%;
+}
+
+.logout{
+    margin-top: 1%;
+    position: absolute;
+    top: 85%;
+    left: 46.6%;
+    right: 0;
+    bottom: 0%;
+}
+
