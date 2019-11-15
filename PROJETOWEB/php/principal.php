@@ -7,23 +7,26 @@ if(!file_exists('../xml/'. $_SESSION['email'].'.xml')){
 
 $xml = new SimpleXMLElement ('../xml/'.$_SESSION['email'].'.xml', 0 , true );
 $usuario = $xml->usuario;
-echo 'Bem<text class="vindo"> Vindo </text><br>'.$usuario;
-
-$linha = array();
 $count = 0;
+$linha = array();
 
         $files = glob('../xml/mail/*.xml');
         foreach($files as $file) {
             $xml = new SimpleXMLElement ($file, 0 , true );
             $pesquisado = false;
 
-           
+            if (isset($_POST['ajax_pesquisa'])){
+                $pesquisado = true;
+                $busca = $_POST['ajax_pesquisa'];
+            }
+
             if($pesquisado == false){
                 if($xml->Destinatario == $_SESSION['email']){
                     $linha[$count]["url"] = $file;
-                    $linha[$count]["remetente"] = $xml->Remetente;
-                    $linha[$count]["titulo"] = $xml->Titulo;
-                    $linha[$count]["texto"] = $xml->Texto;
+                    $linha[$count]["remetente"] = trim($xml->Remetente);
+                    $linha[$count]["titulo"] = trim($xml->Titulo);
+                    $linha[$count]["texto"] = trim($xml->Texto);
+                    $count++;
                 }
             }
             else{
@@ -32,21 +35,25 @@ $count = 0;
                     $linha[$count]["remetente"] = $xml->Remetente;
                     $linha[$count]["titulo"] = $xml->Titulo;
                     $linha[$count]["texto"] = $xml->Texto;
+                    $count++;
             }
             if($xml->Titulo == $busca and $xml->Destinatario == $_SESSION['email']){
                     $linha[$count]["url"] = $file;
                     $linha[$count]["remetente"] = $xml->Remetente;
                     $linha[$count]["titulo"] = $xml->Titulo;
                     $linha[$count]["texto"] = $xml->Texto;
+                    $count++;
             }
             if($xml->Destinatario == $_SESSION['email'] and $busca == ''){
                     $linha[$count]["url"] = $file;
                     $linha[$count]["remetente"] = $xml->Remetente;
                     $linha[$count]["titulo"] = $xml->Titulo;
                     $linha[$count]["texto"] = $xml->Texto;  
+                    $count++;
                 }
+                
             }
-            $count++;
+            
         }
         echo json_encode($linha);
 ?>
