@@ -16,6 +16,20 @@ $(document).ready(function() {
             data:{
                 ajax_pesquisa: pesquisa
             },
+            success: function(retorno){ 
+                var conteudo = "";
+                conteudo += "<table class= 'emails'>";
+                for(var i = 0;i < retorno.length; i++){
+                conteudo += "<tr>";
+                conteudo += "<td>"+ "<a href=" + retorno[i].url + " class='mail'><img border='0'src='../img/open.png' width='35' height='35'></a>" + "</td>";
+                conteudo += "<td>"+ retorno[i].remetente + "</td>";
+                conteudo += "<td>"+ retorno[i].titulo + "</td>";
+                conteudo += "<td class='menor'>"+" - "+ retorno[i].texto + "</td>";
+                conteudo += "</tr>";
+                $("#divLista").html(conteudo);
+                }
+                conteudo += "</table>";
+            }
     });
 });
     $.ajax({
@@ -25,7 +39,7 @@ $(document).ready(function() {
         url: "../php/principal.php",
         success: function(retorno){
             if(retorno == "sair"){
-                alert("erro")
+                window.location = "../php/logout.php";
             }
             else{
 

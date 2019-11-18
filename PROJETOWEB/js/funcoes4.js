@@ -17,13 +17,24 @@ $(document).ready(function(){
             },
             success: function(retorno){ 
                 if(retorno == "error"){
-                alert("erro")
-                }
-                if(retorno == "sair"){
-                    window.location = "../php/logout.php";
+                alert("Usuario " + destino + " nao existente")
                 }
 
             }
         });
+    });
+    
+    $.ajax({
+
+        type: "POST",
+        dataType: "json",
+        url: "../php/enviar.php",
+        success: function(retorno){ 
+            
+            if(retorno == "sair"){
+                window.location = "../php/logout.php";
+            }
+
+        }
     });
 });
