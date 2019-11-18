@@ -23,7 +23,12 @@ $(document).ready(function() {
         type: "POST",
         dataType: "json",
         url: "../php/principal.php",
-        success: function(retorno){ 
+        success: function(retorno){
+            if(retorno == "sair"){
+                alert("erro")
+            }
+            else{
+
             var conteudo = "";
             conteudo += "<table class= 'emails'>";
             for(var i = 0;i < retorno.length; i++){
@@ -36,6 +41,7 @@ $(document).ready(function() {
             $("#divLista").html(conteudo);
         }
         conteudo += "</table>";
+    }
         
     }
 });

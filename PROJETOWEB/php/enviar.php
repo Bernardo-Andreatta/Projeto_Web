@@ -1,7 +1,7 @@
 <?php 
 session_start();
-if(!file_exists('../xml/'. $_SESSION['email'].'.xml')){
-    header('Location: ../paginas/login.html');
+if(!isset($_SESSION['email'])){
+    echo json_encode("sair");
     die;
 }
 
@@ -13,13 +13,8 @@ if(!file_exists('../xml/'. $_SESSION['email'].'.xml')){
           $randomString .= $characters[rand(0, $charactersLength - 1)];
      }
      return $randomString;
-}
+} 
 
-        $xml = new SimpleXMLElement ('../xml/'.$_SESSION['email'].'.xml', 0 , true );
-        $usuario = $xml->usuario;
-        echo 'Bem vindo '.$usuario;
-  
-    $error = false;
         $destinatario = $_POST['ajax_destino'];
         $titulo = $_POST['ajax_titulo'];
         $texto = htmlentities($_POST['ajax_texto']);
@@ -53,10 +48,6 @@ if(!file_exists('../xml/'. $_SESSION['email'].'.xml')){
             $xml->save('../xml/mail/'.$random.'.xml');
         }
         else{
-            $error = true; 
-        }
-
-        if ($error == true){
-        echo 'Usuario '.$destinatario.' inexistente';
+            echo json_encode("error");
         }
         ?>

@@ -1,7 +1,7 @@
 <?php 
 session_start();
-if(!file_exists('../xml/'. $_SESSION['email'].'.xml')){
-    header('Location: ../paginas/login.html');
+if(!isset($_SESSION['email'])){
+    echo json_encode("sair");
     die;
 }
 

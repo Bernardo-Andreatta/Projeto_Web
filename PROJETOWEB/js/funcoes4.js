@@ -15,6 +15,15 @@ $(document).ready(function(){
                 ajax_destino:  destino,
                 ajax_texto: texto
             },
+            success: function(retorno){ 
+                if(retorno == "error"){
+                alert("erro")
+                }
+                if(retorno == "sair"){
+                    window.location = "../php/logout.php";
+                }
+
+            }
         });
     });
 });

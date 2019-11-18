@@ -1,7 +1,7 @@
 <?php 
 session_start();
-if(!file_exists('../xml/'. $_SESSION['email'].'.xml')){
-    header('Location: ../paginas/login.html');
+if(!isset($_SESSION['email'])){
+    echo json_encode("sair");
     die;
 }
 
@@ -19,7 +19,6 @@ $linha = array();
                 $pesquisado = true;
                 $busca = $_POST['ajax_pesquisa'];
             }
-
             if($pesquisado == false){
                 if($xml->Destinatario == $_SESSION['email']){
                     $linha[$count]["url"] = $file;
@@ -32,23 +31,23 @@ $linha = array();
             else{
                 if($xml->Remetente == $busca and $xml->Destinatario == $_SESSION['email']){
                     $linha[$count]["url"] = $file;
-                    $linha[$count]["remetente"] = $xml->Remetente;
-                    $linha[$count]["titulo"] = $xml->Titulo;
-                    $linha[$count]["texto"] = $xml->Texto;
+                    $linha[$count]["remetente"] = trim($xml->Remetente);
+                    $linha[$count]["titulo"] = trim($xml->Titulo);
+                    $linha[$count]["texto"] = trim($xml->Texto);
                     $count++;
             }
             if($xml->Titulo == $busca and $xml->Destinatario == $_SESSION['email']){
                     $linha[$count]["url"] = $file;
-                    $linha[$count]["remetente"] = $xml->Remetente;
-                    $linha[$count]["titulo"] = $xml->Titulo;
-                    $linha[$count]["texto"] = $xml->Texto;
+                    $linha[$count]["remetente"] = trim($xml->Remetente);
+                    $linha[$count]["titulo"] = trim($xml->Titulo);
+                    $linha[$count]["texto"] = trim($xml->Texto);
                     $count++;
             }
             if($xml->Destinatario == $_SESSION['email'] and $busca == ''){
                     $linha[$count]["url"] = $file;
-                    $linha[$count]["remetente"] = $xml->Remetente;
-                    $linha[$count]["titulo"] = $xml->Titulo;
-                    $linha[$count]["texto"] = $xml->Texto;  
+                    $linha[$count]["remetente"] = trim($xml->Remetente);
+                    $linha[$count]["titulo"] = trim($xml->Titulo);
+                    $linha[$count]["texto"] = trim($xml->Texto); 
                     $count++;
                 }
                 

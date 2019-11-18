@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="../../xsl/estiloXml.xsl"?>
 <mail>
   <Destinatario>admin@cyan.com</Destinatario>
-  <Remetente>teste</Remetente>
-  <Titulo>TESTE</Titulo>
-  <Texto>1234214</Texto>
+  <Remetente>admin@cyan.com</Remetente>
+  <Titulo>2312</Titulo>
+  <Texto>3123123</Texto>
 </mail>
