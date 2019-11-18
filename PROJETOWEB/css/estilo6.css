@@ -1,0 +1,104 @@
+
+.logout{
+    position:absolute;
+    margin-left: 93%;
+    margin-top: -10%;
+    z-index: 2;
+}
+.divBox{
+    margin:auto;
+    text-align: center;
+    height: 40%;
+    width: 30%;
+    background:rgb(233, 233, 233);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 10%;
+    margin-bottom: 10%;
+    z-index: 0;
+}
+.image{
+    width: 30px;
+    height: 30px;
+}
+.image2{
+    width: 28px;
+    height: 23px;
+}
+.image3{
+    position: absolute;
+    margin-top: -6%;
+    width: 30px;
+    height: 30px;
+}
+.d{
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 80%;
+    background:white;
+}
+.a{
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 80%;
+    background:white;
+}
+.t{
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 80%;
+    background:white;
+}
+input{
+    height: 100%;
+    width: 85%;
+    border: none;
+}
+input:focus{
+    outline: 0; 
+}
+textarea{
+    height: 100%;
+    width: 83%;
+    border: none;
+}
+textarea:focus{
+    outline: 0; 
+}
+table td:first-child{
+    min-width: 5px;
+    max-width: 5px;
+}
+.botao{
+    position: relative;
+    width:  70%;
+    min-width:  100px;
+    border-radius:  24px; 
+    text-align:  center; 
+    padding:  15px 40px;
+    background-color: #8bc9c6; 
+    color:  #fff; 
+    font-size:  14px;
+    margin-left:  auto; 
+    margin-top: 5%;
+    font-weight:  500; 
+    box-shadow:  0px 2px 6px -1px rgba(0,0,0,.13); 
+    border:  none;
+    outline: 0; 
+}
+.botao:hover{
+    transform:  translateY(-3px);
+    box-shadow:  0 2px 6px -1px rgba(0,0,0, .65);
+    cursor: pointer;
+}
+.botao:active{
+    transform:  scale(.99);
+    cursor: pointer;
+}
+.botao:focus {
+    outline:0;
+    cursor: pointer;
+}

@@ -19,7 +19,8 @@ $(document).ready(function() {
                 conteudo += "<td>"+ "<a href=" + retorno[i].url + " class='mail'><img border='0'src='../img/open.png' width='35' height='35'></a>" + "</td>";
                 conteudo += "<td>"+ retorno[i].remetente + "</td>";
                 conteudo += "<td>"+ retorno[i].titulo + "</td>";
-                conteudo += "<td class='menor'>"+" - "+ retorno[i].texto + "</td>";
+                conteudo += "<td>-</td>";
+                conteudo += "<td class='menor'>"+ retorno[i].texto + "</td>";
                 conteudo += "</tr>";
                 $("#divLista").html(conteudo);
                 }
@@ -45,7 +46,8 @@ $(document).ready(function() {
             conteudo += "<td>"+ "<a href=" + retorno[i].url + " class='mail'><img border='0'src='../img/open.png' width='35' height='35'></a>" + "</td>";
             conteudo += "<td>"+ retorno[i].remetente + "</td>";
             conteudo += "<td>"+ retorno[i].titulo + "</td>";
-            conteudo += "<td class='menor'>"+" - "+ retorno[i].texto + "</td>";
+            conteudo += "<td>-</td>";
+            conteudo += "<td class='menor'>"+ retorno[i].texto + "</td>";
             conteudo += "</tr>";
             $("#divLista").html(conteudo);
         }
