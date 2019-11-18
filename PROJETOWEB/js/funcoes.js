@@ -1,11 +1,11 @@
 $(document).ready(function() {
        
-    jQuery(document).ready(function($) {
-        $(".clickable-row").click(function() {
-            window.location = $(this).data("href");
-        });
+    $('#emails tr').click(function() {
+        var href = $(this).find("a").attr("href");
+        if(href) {
+            window.location = href;
+        }
     });
-
     $("#pesq").click(function(){
         var pesquisa = $("#pesquisa").val();
         $.ajax({

@@ -19,6 +19,9 @@ $(document).ready(function(){
                 if(retorno == "error"){
                 alert("Usuario " + destino + " nao existente")
                 }
+                else{
+                    window.location = "../paginas/principal.html";
+                }
 
             }
         });
