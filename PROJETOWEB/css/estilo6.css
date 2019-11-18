@@ -32,6 +32,7 @@
     height: 30px;
 }
 .d{
+    border:  solid 1px #8bc9c6; 
     border-radius: 5px;
     margin-left: 10%;
     margin-top: 5%;
@@ -40,6 +41,7 @@
     background:white;
 }
 .a{
+    border:  solid 1px #8bc9c6; 
     border-radius: 5px;
     margin-left: 10%;
     margin-top: 5%;
@@ -48,6 +50,7 @@
     background:white;
 }
 .t{
+    border:  solid 1px #8bc9c6; 
     border-radius: 5px;
     margin-left: 10%;
     margin-top: 5%;
@@ -64,6 +67,7 @@ input:focus{
     outline: 0; 
 }
 textarea{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     height: 100%;
     width: 83%;
     border: none;
