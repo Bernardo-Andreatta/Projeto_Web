@@ -23,15 +23,15 @@ html, body{
 
 .inputs{
     position: absolute;
-    margin-top: 11%;
-    margin-left: 21%;
+    margin-top: 10%;
+    margin-left: 20%;
 }
 
 input{
     background: transparent;
     font-size: 15px;
     padding-top: 2px;
-    margin-top: 1px;
+    margin-top: 10px;
     height: 40px;
     border: none;
     border-bottom:  solid 1px rgba(0,0,0,.1); 
@@ -92,12 +92,12 @@ button:active{
 
 .user-icon{
     position: absolute;
-    margin-top: 14%;
-    margin-left: 5%;
+    margin-top: 11%;
+    margin-left: 2%;
 }
 
 .user{
     opacity: 80%;
-    height: 100px;
+    height: 200px;
     width: auto;
 }
