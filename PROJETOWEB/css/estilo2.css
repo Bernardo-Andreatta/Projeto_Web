@@ -11,7 +11,7 @@ html, body{
 
 
 .box{
-    transition: 1.3s;
+    transition: ease-in-out 1s;
     margin: 0 auto;
     margin-top: 120px;
     width: 500px;
