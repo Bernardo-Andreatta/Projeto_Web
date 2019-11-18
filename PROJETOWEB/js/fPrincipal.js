@@ -1,0 +1,59 @@
+
+$(document).ready(function() {
+       
+    $("#pesq").click(function(){
+        var pesquisa = $("#pesquisa").val();
+        $.ajax({
+
+            type: "POST",
+            dataType: "json",
+            url: "../php/principal.php",
+            data:{
+                ajax_pesquisa: pesquisa
+            },
+            success: function(retorno){ 
+                var conteudo = "";
+                conteudo += "<table class= 'emails'>";
+                for(var i = 0;i < retorno.length; i++){
+                conteudo += "<tr onclick = 'location.href= &quot;"+retorno[i].url+"&quot'>";
+                conteudo += "<td>"+ "<a href=" + retorno[i].url + " class='mail'><img border='0'src='../img/open.png' width='35' height='35'></a>" + "</td>";
+                conteudo += "<td>"+ retorno[i].remetente + "</td>";
+                conteudo += "<td>"+ retorno[i].titulo + "</td>";
+                conteudo += "<td>-</td>";
+                conteudo += "<td class='menor'>"+ retorno[i].texto + "</td>";
+                conteudo += "</tr>";
+                $("#divLista").html(conteudo);
+                }
+                conteudo += "</table>";
+            }
+    });
+});
+    $.ajax({
+
+        type: "POST",
+        dataType: "json",
+        url: "../php/principal.php",
+        success: function(retorno){
+            if(retorno == "sair"){
+                window.location = "../php/logout.php";
+            }
+            else{
+            var conteudo = "";
+            
+            conteudo += "<table class= 'emails'>";
+            for(var i = 0;i < retorno.length; i++){
+            conteudo += "<tr  onclick = 'location.href= &quot;"+retorno[i].url+"&quot'>";
+            conteudo += "<td>"+ "<a href=" + retorno[i].url + " class='mail'><img border='0'src='../img/open.png' width='35' height='35'></a>" + "</td>";
+            conteudo += "<td>"+ retorno[i].remetente + "</td>";
+            conteudo += "<td>"+ retorno[i].titulo + "</td>";
+            conteudo += "<td>-</td>";
+            conteudo += "<td class='menor'>"+ retorno[i].texto + "</td>";
+            conteudo += "</tr>";
+            $("#divLista").html(conteudo);
+        }
+        conteudo += "</table>";
+    }
+        
+    }
+});
+});
