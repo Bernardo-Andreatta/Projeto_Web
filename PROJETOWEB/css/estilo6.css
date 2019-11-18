@@ -32,6 +32,7 @@
     height: 30px;
 }
 .d{
+    border-radius: 5px;
     margin-left: 10%;
     margin-top: 5%;
     margin-bottom: 5%;
@@ -39,6 +40,7 @@
     background:white;
 }
 .a{
+    border-radius: 5px;
     margin-left: 10%;
     margin-top: 5%;
     margin-bottom: 5%;
@@ -46,6 +48,7 @@
     background:white;
 }
 .t{
+    border-radius: 5px;
     margin-left: 10%;
     margin-top: 5%;
     margin-bottom: 5%;
