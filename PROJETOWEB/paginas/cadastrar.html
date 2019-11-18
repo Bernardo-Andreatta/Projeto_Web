@@ -1,24 +1,40 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
     <head>
-    <script src="../js/jquery-3.4.1.js"></script>
-    <script src="../js/fCadastrar.js"></script>
-    <link rel="stylesheet" href="../css/estilo2.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Logon</title>
+        <script src="../js/jquery-3.4.1.js"></script>
+        <script src="../js/funcoes2.js"></script>
+        <link rel="stylesheet" href="../css/estilo2.css">
+        <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Cadastre-se</title>
     </head>
 
     <body>
+
         <div class="box">
-        <h1><text class="cyan">Sign</text>Up</h1><br>
-        <div class="loc">
-        <p><input class="divInput" type="text" id="usuario" placeholder="Usuario"></p>
-        <p><input class="divInput" type="text" id="email" placeholder="Email"></p>
-        <p><input class="divInput" type="password" id="senha"placeholder="Senha"></p>
-        <p><input class="divInput" type="password" placeholder="Confirmar senha" id="c_senha"></p>
-        </div>
-        <p><input type="button" id="submit" value="Registrar" class="botao"></p>
-        </div>
+
+            <div class="user-icon">
+                <img src="../img/usericon.png" class="user">
+            </div><!--user-icon-->
+
+            <div class="txt">
+                    <b>Sign</b> Up
+            </div><!--txt-->
+
+            <div class="inputs">
+                <p><input type="text" placeholder="Usuário" id="usuario"></p>
+                <p><input type="text" placeholder="E-mail" id="email"></p>
+                <p><input type="text" placeholder="Senha" id="senha"></p>
+                <p><input type="text" placeholder="Confirmar senha" id="c_senha"></p>
+            </div><!--inputs-->
+
+        </div><!--box-->
+
+        <div class="button">
+                <button id="submit">Registrar</button>
+        </div><!--button-->
+
     </body>
 </html>
