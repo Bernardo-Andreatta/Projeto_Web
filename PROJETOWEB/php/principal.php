@@ -31,7 +31,8 @@ $linha = array();
 
 
             else{
-                if($xml->Remetente == $busca and ($xml->Destinatario == $_SESSION['email'] or $xml->Cc == $_SESSION['email'])){
+
+            if($xml->Remetente == $busca and ($xml->Destinatario == $_SESSION['email'] or $xml->Cc == $_SESSION['email'])){
                     $linha[$count]["url"] = $file;
                     $linha[$count]["remetente"] = trim($xml->Remetente);
                     $linha[$count]["titulo"] = trim($xml->Titulo);

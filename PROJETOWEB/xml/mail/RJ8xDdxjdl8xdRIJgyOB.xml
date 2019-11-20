@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../../xsl/estiloXml.xsl"?>
+<mail>
+  <Destinatario>admin@cyan.com</Destinatario>
+  <Cc></Cc>
+  <Remetente>mark@cyan.com</Remetente>
+  <Titulo>F</Titulo>
+  <Texto>F</Texto>
+</mail>

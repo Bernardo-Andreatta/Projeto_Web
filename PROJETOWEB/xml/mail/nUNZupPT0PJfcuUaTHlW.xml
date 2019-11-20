@@ -2,8 +2,8 @@
 <?xml-stylesheet type="text/xsl" href="../../xsl/estiloXml.xsl"?>
 <mail>
   <Destinatario>admin@cyan.com</Destinatario>
-  <Cc>aug@cyan.com</Cc>
-  <Remetente>teste</Remetente>
-  <Titulo>Teste</Titulo>
-  <Texto></Texto>
+  <Cc></Cc>
+  <Remetente>mark@cyan.com</Remetente>
+  <Titulo>J</Titulo>
+  <Texto>J</Texto>
 </mail>
