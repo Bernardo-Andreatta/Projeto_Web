@@ -12,11 +12,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <tr>
       <td>De: </td>
       <td><xsl:value-of select="Remetente"/></td>
-      
     </tr>
     <tr>
       <td>Para: </td>
       <td><xsl:value-of select="Destinatario"/></td>
+    </tr>
+    <tr>
+      <td>Cc: </td>
+      <td><xsl:value-of select="Cc"/></td>
     </tr>
     <tr>
       <td>Titulo: </td>

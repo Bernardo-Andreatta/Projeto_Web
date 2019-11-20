@@ -20,7 +20,7 @@ $linha = array();
             }
 
             if($pesquisado == false){
-                if($xml->Destinatario == $_SESSION['email']){
+                if($xml->Destinatario == $_SESSION['email'] or $xml->Cc == $_SESSION['email']){
                     $linha[$count]["url"] = $file;
                     $linha[$count]["remetente"] = trim($xml->Remetente);
                     $linha[$count]["titulo"] = trim($xml->Titulo);
@@ -31,21 +31,21 @@ $linha = array();
 
 
             else{
-                if($xml->Remetente == $busca and $xml->Destinatario == $_SESSION['email']){
+                if($xml->Remetente == $busca and ($xml->Destinatario == $_SESSION['email'] or $xml->Cc == $_SESSION['email'])){
                     $linha[$count]["url"] = $file;
                     $linha[$count]["remetente"] = trim($xml->Remetente);
                     $linha[$count]["titulo"] = trim($xml->Titulo);
                     $linha[$count]["texto"] = trim($xml->Texto);
                     $count++;
             }
-            if($xml->Titulo == $busca and $xml->Destinatario == $_SESSION['email']){
+            if($xml->Titulo == $busca and ($xml->Destinatario == $_SESSION['email'] or $xml->Cc == $_SESSION['email'])){
                     $linha[$count]["url"] = $file;
                     $linha[$count]["remetente"] = trim($xml->Remetente);
                     $linha[$count]["titulo"] = trim($xml->Titulo);
                     $linha[$count]["texto"] = trim($xml->Texto);
                     $count++;
             }
-            if($busca == '' and $xml->Destinatario == $_SESSION['email']){
+            if($busca == '' and ($xml->Destinatario == $_SESSION['email'] or $xml->Cc == $_SESSION['email'])){
                     $linha[$count]["url"] = $file;
                     $linha[$count]["remetente"] = trim($xml->Remetente);
                     $linha[$count]["titulo"] = trim($xml->Titulo);

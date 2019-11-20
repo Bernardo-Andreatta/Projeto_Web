@@ -19,9 +19,10 @@ if(!isset($_SESSION['email'])){
         $titulo = $_POST['ajax_titulo'];
         $texto = htmlentities($_POST['ajax_texto']);
         $remetente = $_SESSION['email'];
+        $cc = $_POST['ajax_cc'];
         $random = generateRandomString();
 
-        if(file_exists('../xml/'.$destinatario.'.xml') and $titulo != ''){
+        if(file_exists('../xml/'.$destinatario.'.xml') and $titulo != '' and (file_exists('../xml/'.$cc.'.xml') or $cc == '')){
             $xml = new DOMDocument();
             $xml->formatOutput = true;
             $xml->preserveWhiteSpace = false;
@@ -33,6 +34,10 @@ if(!isset($_SESSION['email'])){
             $ele1 = $xml->createElement('Destinatario');
             $ele1->nodeValue=$destinatario;
             $root->appendChild($ele1);
+
+            $ele5 = $xml->createElement('Cc');
+            $ele5->nodeValue=$cc;
+            $root->appendChild($ele5);
 
             $ele2 = $xml->createElement('Remetente');
             $ele2->nodeValue=$remetente;
@@ -50,10 +55,16 @@ if(!isset($_SESSION['email'])){
             echo json_encode("success");
         }
 
-        if($titulo == '' and file_exists('../xml/'.$destinatario.'.xml')){
-            echo json_encode("branco");
-        }
+       
         if(!file_exists('../xml/'.$destinatario.'.xml')){
             echo json_encode("error");
+        }
+
+        if(!file_exists('../xml/'.$cc.'.xml') and $cc != '' and $titulo != ''){
+            echo json_encode("cc");
+        }
+
+        if($titulo == '' and file_exists('../xml/'.$destinatario.'.xml')){
+            echo json_encode("branco");
         }
         ?>

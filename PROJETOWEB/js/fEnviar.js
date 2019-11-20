@@ -4,6 +4,7 @@ $(document).ready(function(){
         var titulo = $("#titulo").val();
         var destino = $("#destino").val();
         var texto = $("#texto").val();
+        var cc = $("#cc").val();
 
         $.ajax({
 
@@ -13,7 +14,8 @@ $(document).ready(function(){
             data:{
                 ajax_titulo:  titulo,
                 ajax_destino:  destino,
-                ajax_texto: texto
+                ajax_texto: texto,
+                ajax_cc: cc
             },
             success: function(retorno){ 
                 if(retorno == "error"){
@@ -21,6 +23,10 @@ $(document).ready(function(){
                 }
                 if(retorno == "success"){
                     window.location = "../paginas/principal.html";
+                }
+
+                if(retorno == "cc"){
+                    alert("Cc inexistente")
                 }
 
                 if(retorno == "branco"){
