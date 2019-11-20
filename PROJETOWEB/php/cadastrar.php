@@ -40,7 +40,6 @@ $errors = array();
     
         $xml->save("../xml/$email.xml");
         echo json_encode ("success");
-        die;
     }
     
     if(count($errors) > 0){

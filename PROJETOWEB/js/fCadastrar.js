@@ -19,7 +19,7 @@ $(document).ready(function(){
             },
             success:function(response){
                 if (response == "success") {
-                    window.location.href="../paginas/login.html"
+                    window.location.href="../index.html"
                 }
                 else{
                     alert(response)

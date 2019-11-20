@@ -3,8 +3,8 @@ $(document).ready(function() {
        
     $("#pesq").click(function(){
         var pesquisa = $("#pesquisa").val();
+        
         $.ajax({
-
             type: "POST",
             dataType: "json",
             url: "../php/principal.php",

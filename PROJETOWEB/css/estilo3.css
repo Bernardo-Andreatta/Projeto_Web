@@ -217,6 +217,7 @@ a:-webkit-any-link {
 }
 body{
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 ::-webkit-scrollbar-track {
@@ -235,7 +236,7 @@ body{
 }
 .emails{
     overflow-y:scroll;
-    height:88%;
+    height:85%;
     display:block;
     font-size:  26px;
     position: absolute;;

@@ -10,17 +10,18 @@ if(!isset($_SESSION['email'])){
         $charactersLength = strlen($characters);
         $randomString = '';
         for ($i = 0; $i < $length; $i++) {
-          $randomString .= $characters[rand(0, $charactersLength - 1)];
-     }
-     return $randomString;
-} 
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomString;
+    }
 
         $destinatario = $_POST['ajax_destino'];
         $titulo = $_POST['ajax_titulo'];
         $texto = htmlentities($_POST['ajax_texto']);
         $remetente = $_SESSION['email'];
         $random = generateRandomString();
-        if(file_exists('../xml/'.$destinatario.'.xml')){
+
+        if(file_exists('../xml/'.$destinatario.'.xml') and $titulo != ''){
             $xml = new DOMDocument();
             $xml->formatOutput = true;
             $xml->preserveWhiteSpace = false;
@@ -48,7 +49,11 @@ if(!isset($_SESSION['email'])){
             $xml->save('../xml/mail/'.$random.'.xml');
             echo json_encode("success");
         }
-        else{
+
+        if($titulo == '' and file_exists('../xml/'.$destinatario.'.xml')){
+            echo json_encode("branco");
+        }
+        if(!file_exists('../xml/'.$destinatario.'.xml')){
             echo json_encode("error");
         }
         ?>

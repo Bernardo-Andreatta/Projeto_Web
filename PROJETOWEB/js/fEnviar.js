@@ -17,10 +17,14 @@ $(document).ready(function(){
             },
             success: function(retorno){ 
                 if(retorno == "error"){
-                alert("Usuario " + destino + " nao existente")
+                    alert("Destinatário " + destino + " inexistente")
                 }
-                else{
+                if(retorno == "success"){
                     window.location = "../paginas/principal.html";
+                }
+
+                if(retorno == "branco"){
+                    alert("Titulo em branco");
                 }
 
             }
