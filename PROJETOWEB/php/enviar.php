@@ -60,7 +60,7 @@ if(!isset($_SESSION['email'])){
             echo json_encode("error");
         }
 
-        if(!file_exists('../xml/'.$cc.'.xml') and $cc != '' and $titulo != ''){
+        if(!file_exists('../xml/'.$cc.'.xml') and $cc != '' and $titulo != '' and file_exists('../xml/'.$destinatario.'.xml') ){
             echo json_encode("cc");
         }
 
